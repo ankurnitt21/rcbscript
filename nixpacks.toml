@@ -1,6 +1,6 @@
 [phases.setup]
-nixPkgs = ["python311", "playwright"]
-cmds = ["pip install -r requirements.txt"]
+nixPkgs = ["python311"]  # Ensure Python 3.11 is installed
+cmds = ["python3 -m ensurepip", "python3 -m pip install --upgrade pip"]
 
 [start]
-cmd = "./start.sh"
+cmd = "python3 script1.py"
