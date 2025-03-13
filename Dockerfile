@@ -1,15 +1,14 @@
-# Use an official lightweight Python image
-FROM python:3.11
+# Use the official Playwright image with all dependencies pre-installed
+FROM mcr.microsoft.com/playwright/python:v1.42.0
 
 # Set the working directory
 WORKDIR /app
 
-# Copy all project files
+# Copy project files
 COPY . .
 
-# Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt \
-    && playwright install
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Run the script
 CMD ["python", "script1.py"]
