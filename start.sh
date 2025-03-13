@@ -1,3 +1,3 @@
 #!/bin/bash
 playwright install
-python3 your_script.py
+python3 script1.py
